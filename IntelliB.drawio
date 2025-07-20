@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0" version="28.0.6">
+  <diagram name="Page-1" id="P4wz9tz5DpIjRcyxbAzH">
+    <mxGraphModel dx="862" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--1" target="JRjFhBzN5Ztp_i3TkOo--4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--1" target="JRjFhBzN5Ztp_i3TkOo--3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--1" value="Intent Extractor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--2" target="JRjFhBzN5Ztp_i3TkOo--3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--2" value="Response Generator" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--3" target="JRjFhBzN5Ztp_i3TkOo--1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--3" target="JRjFhBzN5Ztp_i3TkOo--2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--3" target="JRjFhBzN5Ztp_i3TkOo--10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--3" value="Bot" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--4" value="LLM Layer&lt;div&gt;(Groq)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="541" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JRjFhBzN5Ztp_i3TkOo--10" value="Chat Interface&lt;div&gt;(emulator)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
