@@ -51,7 +51,7 @@ class IntentExtractor {
 
         try {
             // Load weather-specific intents from intents.js
-            const weatherIntents = require('./intents.js');
+            const weatherIntents = require('../intents.js');
             
             // Use provided intents or default to weather intents
             const intents = availableIntents.length > 0 ? availableIntents : weatherIntents;
@@ -148,7 +148,7 @@ The confidence should be between 0.0 and 1.0.
         // Add timestamp
         result.timestamp = new Date().toISOString();
 
-        return result;
+        return result.intent;
     }
 
     /**
