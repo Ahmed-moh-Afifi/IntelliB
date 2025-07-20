@@ -13,7 +13,7 @@ const port = 8000
 // ************* Config *************
 
 const testMiddleware = function(req, res, next) {
-    console.log('Test Middleware Exectued!')
+    console.log('Test Middleware Executed!')
     next()
 }
 

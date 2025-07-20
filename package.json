@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "botbuilder": "^4.17.0-blobs1",
+    "express": "^5.1.0"
+  }
+}
