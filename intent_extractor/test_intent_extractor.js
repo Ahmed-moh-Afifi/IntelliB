@@ -6,7 +6,7 @@
 // Load environment variables from .env file
 require('dotenv').config();
 
-const IntentExtractor = require('./intent_extractor');
+const IntentExtractor = require('../intent_extractor');
 
 // Example usage
 async function testIntentExtractor() {

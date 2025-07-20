@@ -108,12 +108,6 @@ User Message: "${message}"
 
 Available Weather Intents: ${intents.join(', ')}
 
-Guidelines:
-- "today's weather inquiry": Questions about current day weather
-- "upcoming week's weather inquiry": Questions about weather for the next 7 days
-- "upcoming month's weather inquiry": Questions about weather for the next month
-- "undefined": Use this for non-weather messages or unclear weather requests
-
 Please respond with a JSON object in this exact format:
 {
     "intent": "the_classified_intent_or_undefined",
