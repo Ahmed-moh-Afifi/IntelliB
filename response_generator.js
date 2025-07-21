@@ -1,4 +1,4 @@
-const LLMGenerator = require("./groq.js");
+const LLMGenerator = require("./llm_generator.js");
 const Weather = require("./weather.js");
 
 class ResponseGenerator {

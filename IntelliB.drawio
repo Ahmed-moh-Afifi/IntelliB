@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="P4wz9tz5DpIjRcyxbAzH">
-        <mxGraphModel dx="905" dy="407" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="702" dy="447" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,9 +10,6 @@
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="JRjFhBzN5Ztp_i3TkOo--1" target="JRjFhBzN5Ztp_i3TkOo--3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="JRjFhBzN5Ztp_i3TkOo--1" value="Intent Extractor" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="440" width="120" height="60" as="geometry"/>
-                </mxCell>
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="JRjFhBzN5Ztp_i3TkOo--2" target="JRjFhBzN5Ztp_i3TkOo--3" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
@@ -20,10 +17,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="3" style="edgeStyle=none;html=1;shape=link;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--2" target="2">
+                <mxCell id="3" style="edgeStyle=none;html=1;shape=link;" parent="1" source="JRjFhBzN5Ztp_i3TkOo--2" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shape=link;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--2" target="4">
+                <mxCell id="5" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shape=link;" parent="1" source="JRjFhBzN5Ztp_i3TkOo--2" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--2" value="Response Generator" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -42,20 +39,49 @@
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=link;" parent="1" source="JRjFhBzN5Ztp_i3TkOo--3" target="JRjFhBzN5Ztp_i3TkOo--10" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=0;curved=0;" edge="1" parent="1" source="JRjFhBzN5Ztp_i3TkOo--3" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--3" value="Bot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="365" y="330" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--4" value="LLM Layer&lt;div&gt;(Groq)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="541" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="100" y="541" width="260" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="JRjFhBzN5Ztp_i3TkOo--10" value="Chat Interface&lt;div&gt;(emulator)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="365" y="160" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="Weather API" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="Weather API" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="480" y="541" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="LLM Layer&lt;div&gt;(Groq)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="4" value="LLM Layer&lt;div&gt;(Groq)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="660" y="440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=0;curved=0;shape=link;" edge="1" parent="1" source="6" target="JRjFhBzN5Ztp_i3TkOo--4">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="520"/>
+                            <mxPoint x="200" y="520"/>
+                            <mxPoint x="230" y="520"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;rounded=0;curved=0;" edge="1" parent="1" source="6" target="JRjFhBzN5Ztp_i3TkOo--3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="425" y="470"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Entity Extractor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="JRjFhBzN5Ztp_i3TkOo--1" value="Intent Extractor" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="440" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
