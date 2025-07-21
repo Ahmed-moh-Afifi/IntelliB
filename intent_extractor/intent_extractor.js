@@ -566,16 +566,16 @@ class EntityExtractor {
                     const countryName = this.formatCityName(extractedCity);
                     const capital = this.getCountryCapital(extractedCity);
                     
-                    // Create detailed country response
-                    finalCity = `${countryName} is a country and its capital is ${capital}. Do you want any information about it?`;
+                    // Return just the capital city name
+                    finalCity = capital;
                     
                     if (includeMetadata) {
                         return {
                             city: finalCity,
                             confidence: confidence,
-                            reasoning: `Detected "${countryName}" which is a country, not a city`,
+                            reasoning: `Detected "${countryName}" which is a country, returning capital city`,
                             extractedRaw: extractedCity,
-                            isValid: false,
+                            isValid: true,
                             isCountry: true,
                             countryDetected: countryName,
                             capital: capital,
