@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express()
 const botbuilder = require('botbuilder')
-const IntentExtractor = require('./intent_extractor/intent_extractor')
+const Extractors = require('./intent_extractor/intent_extractor')
 const intents = require('./intents')
 const ResponseGenerator = require('./response_generator')
 const sessionManager = require('./session_manager')
@@ -41,10 +41,14 @@ app.post('/api/messages', async (req, res) => {
         if (context.activity.type === 'message') {
             const text = context.activity.text
             sessionManager.addMessage(text)
-            let intentExtractor = new IntentExtractor()
+            let intentExtractor = new Extractors.IntentExtractor()
             let intent = await intentExtractor.extractIntent(text, intents)
+            console.log(`Extracted Intent: ${intent}`)
+            let entityExtractor = new Extractors.EntityExtractor()
+            let entity = await entityExtractor.extractCityEntity(text)
+            console.log(`Extracted Entity: ${entity}`)
             let responseGenerator = new ResponseGenerator()
-            let response = await responseGenerator.generateResponse(intent, '196.137.4.162')
+            let response = await responseGenerator.generateResponse(intent, entity)
             await context.sendActivity(response)
         }
     })

@@ -522,7 +522,7 @@ class EntityExtractor {
 
         try {
             // Extract allowed cities from options
-            const allowedCities = options.allowedCities || null;
+            const allowedCities = null;
             const strictMode = options.strictMode || false;
             const defaultCity = options.defaultCity || "this city don't exist";
             const includeMetadata = options.includeMetadata || false;
@@ -537,7 +537,7 @@ class EntityExtractor {
                         role: "system",
                         content: allowedCities 
                             ? `You are an expert entity extractor specialized in identifying city names from weather-related queries. Extract the city name mentioned in the user's message. Only extract cities from this allowed list: ${allowedCities.join(', ')}. If no city is mentioned or if the text doesn't contain a city from the allowed list, respond with 'no_city_found'. Always respond with a valid JSON object.`
-                            : "You are an expert entity extractor specialized in identifying city names from weather-related queries. Extract the city name mentioned in the user's message. If no city is mentioned or if the text doesn't contain a recognizable city name, respond with 'no_city_found'. Always respond with a valid JSON object."
+                            : "you always translate the city or the country name aka entity to english first,You are specialized in identifying city names from weather-related queries. Extract the city name mentioned in the user's message. If no city is mentioned or if the text doesn't contain a recognizable city name, respond with the exact value 'no_city_found'"
                     },
                     {
                         role: "user",
