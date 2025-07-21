@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express()
 const botbuilder = require('botbuilder')
-const Extractors = require('./intent_extractor/intent_extractor')
+const Extractors = require('./extractors')
 const intents = require('./intents')
 const ResponseGenerator = require('./response_generator')
 const sessionManager = require('./session_manager')

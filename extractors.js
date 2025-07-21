@@ -51,7 +51,7 @@ class IntentExtractor {
 
         try {
             // Load weather-specific intents from intents.js
-            const weatherIntents = require('../intents.js');
+            const weatherIntents = require('./intents.js');
             
             // Use provided intents or default to weather intents
             const intents = availableIntents.length > 0 ? availableIntents : weatherIntents;
