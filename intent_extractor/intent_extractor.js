@@ -318,10 +318,163 @@ class EntityExtractor {
             'sao tome and principe', 'cape verde', 'guinea-bissau', 'guinea', 'sierra leone',
             'liberia', 'ivory coast', 'togo', 'benin', 'iran', 'iraq', 'syria', 'lebanon',
             'jordan', 'israel', 'palestine', 'saudi arabia', 'yemen', 'oman', 'uae',
-            'qatar', 'bahrain', 'kuwait', 'afghanistan', 'uzbekistan', 'kazakhstan',
-            'kyrgyzstan', 'tajikistan', 'turkmenistan', 'mongolia', 'armenia', 'georgia',
-            'azerbaijan'
+            'united arab emirates', 'qatar', 'bahrain', 'kuwait', 'afghanistan', 'uzbekistan', 
+            'kazakhstan', 'kyrgyzstan', 'tajikistan', 'turkmenistan', 'mongolia', 'armenia', 
+            'georgia', 'azerbaijan'
         ];
+
+        // Country capitals mapping
+        this.countryCapitals = {
+            'united states': 'Washington D.C.',
+            'usa': 'Washington D.C.',
+            'america': 'Washington D.C.',
+            'united kingdom': 'London',
+            'uk': 'London',
+            'england': 'London',
+            'britain': 'London',
+            'france': 'Paris',
+            'germany': 'Berlin',
+            'italy': 'Rome',
+            'spain': 'Madrid',
+            'portugal': 'Lisbon',
+            'netherlands': 'Amsterdam',
+            'belgium': 'Brussels',
+            'switzerland': 'Bern',
+            'austria': 'Vienna',
+            'sweden': 'Stockholm',
+            'norway': 'Oslo',
+            'denmark': 'Copenhagen',
+            'finland': 'Helsinki',
+            'ireland': 'Dublin',
+            'poland': 'Warsaw',
+            'czech republic': 'Prague',
+            'hungary': 'Budapest',
+            'romania': 'Bucharest',
+            'bulgaria': 'Sofia',
+            'greece': 'Athens',
+            'turkey': 'Ankara',
+            'russia': 'Moscow',
+            'ukraine': 'Kyiv',
+            'belarus': 'Minsk',
+            'lithuania': 'Vilnius',
+            'latvia': 'Riga',
+            'estonia': 'Tallinn',
+            'croatia': 'Zagreb',
+            'serbia': 'Belgrade',
+            'bosnia': 'Sarajevo',
+            'montenegro': 'Podgorica',
+            'albania': 'Tirana',
+            'macedonia': 'Skopje',
+            'slovenia': 'Ljubljana',
+            'slovakia': 'Bratislava',
+            'china': 'Beijing',
+            'japan': 'Tokyo',
+            'south korea': 'Seoul',
+            'north korea': 'Pyongyang',
+            'india': 'New Delhi',
+            'pakistan': 'Islamabad',
+            'bangladesh': 'Dhaka',
+            'sri lanka': 'Colombo',
+            'nepal': 'Kathmandu',
+            'bhutan': 'Thimphu',
+            'myanmar': 'Naypyidaw',
+            'thailand': 'Bangkok',
+            'vietnam': 'Hanoi',
+            'laos': 'Vientiane',
+            'cambodia': 'Phnom Penh',
+            'malaysia': 'Kuala Lumpur',
+            'singapore': 'Singapore',
+            'indonesia': 'Jakarta',
+            'philippines': 'Manila',
+            'brunei': 'Bandar Seri Begawan',
+            'australia': 'Canberra',
+            'new zealand': 'Wellington',
+            'canada': 'Ottawa',
+            'mexico': 'Mexico City',
+            'brazil': 'Brasília',
+            'argentina': 'Buenos Aires',
+            'chile': 'Santiago',
+            'peru': 'Lima',
+            'colombia': 'Bogotá',
+            'venezuela': 'Caracas',
+            'ecuador': 'Quito',
+            'bolivia': 'Sucre',
+            'uruguay': 'Montevideo',
+            'paraguay': 'Asunción',
+            'egypt': 'Cairo',
+            'libya': 'Tripoli',
+            'tunisia': 'Tunis',
+            'algeria': 'Algiers',
+            'morocco': 'Rabat',
+            'sudan': 'Khartoum',
+            'ethiopia': 'Addis Ababa',
+            'kenya': 'Nairobi',
+            'tanzania': 'Dodoma',
+            'uganda': 'Kampala',
+            'rwanda': 'Kigali',
+            'burundi': 'Gitega',
+            'somalia': 'Mogadishu',
+            'djibouti': 'Djibouti',
+            'eritrea': 'Asmara',
+            'south africa': 'Cape Town',
+            'namibia': 'Windhoek',
+            'botswana': 'Gaborone',
+            'zimbabwe': 'Harare',
+            'zambia': 'Lusaka',
+            'malawi': 'Lilongwe',
+            'mozambique': 'Maputo',
+            'madagascar': 'Antananarivo',
+            'mauritius': 'Port Louis',
+            'seychelles': 'Victoria',
+            'comoros': 'Moroni',
+            'ghana': 'Accra',
+            'nigeria': 'Abuja',
+            'senegal': 'Dakar',
+            'mali': 'Bamako',
+            'burkina faso': 'Ouagadougou',
+            'niger': 'Niamey',
+            'chad': 'N\'Djamena',
+            'cameroon': 'Yaoundé',
+            'gabon': 'Libreville',
+            'congo': 'Brazzaville',
+            'democratic republic of congo': 'Kinshasa',
+            'central african republic': 'Bangui',
+            'equatorial guinea': 'Malabo',
+            'sao tome and principe': 'São Tomé',
+            'cape verde': 'Praia',
+            'guinea-bissau': 'Bissau',
+            'guinea': 'Conakry',
+            'sierra leone': 'Freetown',
+            'liberia': 'Monrovia',
+            'ivory coast': 'Yamoussoukro',
+            'togo': 'Lomé',
+            'benin': 'Porto-Novo',
+            'iran': 'Tehran',
+            'iraq': 'Baghdad',
+            'syria': 'Damascus',
+            'lebanon': 'Beirut',
+            'jordan': 'Amman',
+            'israel': 'Jerusalem',
+            'palestine': 'Ramallah',
+            'saudi arabia': 'Riyadh',
+            'yemen': 'Sana\'a',
+            'oman': 'Muscat',
+            'uae': 'Abu Dhabi',
+            'united arab emirates': 'Abu Dhabi',
+            'qatar': 'Doha',
+            'bahrain': 'Manama',
+            'kuwait': 'Kuwait City',
+            'afghanistan': 'Kabul',
+            'uzbekistan': 'Tashkent',
+            'kazakhstan': 'Nur-Sultan',
+            'kyrgyzstan': 'Bishkek',
+            'tajikistan': 'Dushanbe',
+            'turkmenistan': 'Ashgabat',
+            'mongolia': 'Ulaanbaatar',
+            'armenia': 'Yerevan',
+            'georgia': 'Tbilisi',
+            'azerbaijan': 'Baku'
+        };
     }
 
     /**
@@ -411,7 +564,10 @@ class EntityExtractor {
                 // First check if it's a country instead of a city
                 if (this.isCountry(extractedCity)) {
                     const countryName = this.formatCityName(extractedCity);
-                    finalCity = `That's a country! Please specify a city in ${countryName}.`;
+                    const capital = this.getCountryCapital(extractedCity);
+                    
+                    // Create detailed country response
+                    finalCity = `${countryName} is a country and its capital is ${capital}. Do you want any information about it?`;
                     
                     if (includeMetadata) {
                         return {
@@ -422,6 +578,7 @@ class EntityExtractor {
                             isValid: false,
                             isCountry: true,
                             countryDetected: countryName,
+                            capital: capital,
                             allowedCities: allowedCities,
                             strictMode: strictMode,
                             timestamp: new Date().toISOString()
@@ -598,6 +755,29 @@ If no location is mentioned${allowedCities ? ' or the location is not in the all
     }
 
     /**
+     * Get the capital city of a country
+     * @param {string} countryName - The country name
+     * @returns {string} - The capital city name
+     */
+    getCountryCapital(countryName) {
+        const normalizedCountry = countryName.toLowerCase().trim();
+        
+        // Check direct match first
+        if (this.countryCapitals[normalizedCountry]) {
+            return this.countryCapitals[normalizedCountry];
+        }
+
+        // Check for partial matches
+        for (const [country, capital] of Object.entries(this.countryCapitals)) {
+            if (country.includes(normalizedCountry) || normalizedCountry.includes(country)) {
+                return capital;
+            }
+        }
+
+        return 'Unknown'; // Fallback if capital not found
+    }
+
+    /**
      * Format city name to proper case
      * @param {string} cityName - The city name to format
      * @returns {string} - Properly formatted city name
@@ -635,6 +815,24 @@ If no location is mentioned${allowedCities ? ' or the location is not in the all
      */
     getKnownCountries() {
         return this.knownCountries.map(country => this.formatCityName(country));
+    }
+
+    /**
+     * Get country information including capital
+     * @param {string} countryName - The country name
+     * @returns {Object} - Country information object
+     */
+    getCountryInfo(countryName) {
+        const normalizedCountry = countryName.toLowerCase().trim();
+        const formattedCountry = this.formatCityName(countryName);
+        const capital = this.getCountryCapital(countryName);
+        
+        return {
+            country: formattedCountry,
+            capital: capital,
+            isCountry: this.isCountry(countryName),
+            message: `${formattedCountry} is a country and its capital is ${capital}. Do you want any information about it?`
+        };
     }
 
     /**
