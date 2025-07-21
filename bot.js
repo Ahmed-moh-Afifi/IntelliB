@@ -5,6 +5,7 @@ const botbuilder = require('botbuilder')
 const IntentExtractor = require('./intent_extractor/intent_extractor')
 const intents = require('./intents')
 const ResponseGenerator = require('./response_generator')
+const sessionManager = require('./session_manager')
 
 const adapter = new botbuilder.BotFrameworkAdapter({
     MicrosoftAppId: '',
@@ -39,6 +40,7 @@ app.post('/api/messages', async (req, res) => {
         console.log(`activity.type = ${context.activity.type}`)
         if (context.activity.type === 'message') {
             const text = context.activity.text
+            sessionManager.addMessage(text)
             let intentExtractor = new IntentExtractor()
             let intent = await intentExtractor.extractIntent(text, intents)
             let responseGenerator = new ResponseGenerator()
