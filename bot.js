@@ -6,6 +6,7 @@ const Extractors = require('./extractors')
 const intents = require('./intents')
 const ResponseGenerator = require('./response_generator')
 const sessionManager = require('./session_manager')
+const Utils = require('./utils')
 
 const adapter = new botbuilder.BotFrameworkAdapter({
     MicrosoftAppId: '',
@@ -47,6 +48,8 @@ app.post('/api/messages', async (req, res) => {
             let entityExtractor = new Extractors.EntityExtractor()
             let entity = await entityExtractor.extractCityEntity(text)
             console.log(`Extracted Entity: ${entity}`)
+            entity = entity === 'no_city_found' || undefined ? await Utils.publicIp() : entity
+            console.log(`Final Entity: ${entity}`)
             let responseGenerator = new ResponseGenerator()
             let response = await responseGenerator.generateResponse(intent, entity)
             await context.sendActivity(response)

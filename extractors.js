@@ -499,7 +499,7 @@ class EntityExtractor {
      * @param {Object} options - Optional parameters for entity extraction
      * @param {Array} options.allowedCities - Array of specific cities to restrict extraction to
      * @param {boolean} options.strictMode - If true, only exact matches are allowed (default: false)
-     * @param {string} options.defaultCity - Default city to return if no city found (default: "this city don't exist")
+     * @param {string} options.defaultCity - Default city to return if no city found (default: "no_city_found")
      * @param {boolean} options.includeMetadata - If true, returns object with metadata (default: false)
      * @returns {Promise<string|Object>} - City name if valid, or error message, or metadata object
      */
@@ -509,7 +509,7 @@ class EntityExtractor {
         }
 
         if (!message || typeof message !== 'string') {
-            const defaultResponse = options.defaultCity || "this city don't exist";
+            const defaultResponse = options.defaultCity || "no_city_found";
             return options.includeMetadata ? {
                 city: defaultResponse,
                 confidence: 0.0,
@@ -524,7 +524,7 @@ class EntityExtractor {
             // Extract allowed cities from options
             const allowedCities = null;
             const strictMode = options.strictMode || false;
-            const defaultCity = options.defaultCity || "this city don't exist";
+            const defaultCity = options.defaultCity || "no_city_found";
             const includeMetadata = options.includeMetadata || false;
 
             // Create prompt for city extraction with parameters
@@ -622,7 +622,7 @@ class EntityExtractor {
 
         } catch (error) {
             console.error('Error extracting city entity:', error);
-            const defaultResponse = options.defaultCity || "this city don't exist";
+            const defaultResponse = options.defaultCity || "no_city_found";
             
             if (options.includeMetadata) {
                 return {
