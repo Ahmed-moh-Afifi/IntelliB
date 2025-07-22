@@ -46,13 +46,18 @@ app.post('/api/messages', async (req, res) => {
             let intent = await intentExtractor.extractIntent(text, intents)
             console.log(`Extracted Intent: ${intent}`)
             let entityExtractor = new Extractors.EntityExtractor()
-            let entity = await entityExtractor.extractCityEntity(text)
+            let entity = await entityExtractor.extractEntity(text)
             console.log(`Extracted Entity: ${entity}`)
-            entity = entity === 'no_city_found' || undefined ? await Utils.publicIp() : entity
+            entity = entity === 'local' ? await Utils.publicIp() : entity
             console.log(`Final Entity: ${entity}`)
-            let responseGenerator = new ResponseGenerator()
-            let response = await responseGenerator.generateResponse(intent, entity)
-            await context.sendActivity(response)
+
+            if (entity !== 'undefined') {
+                let responseGenerator = new ResponseGenerator()
+                let response = await responseGenerator.generateResponse(intent, entity)
+                await context.sendActivity(response)
+            } else {
+                await context.sendActivity("No such city")
+            }
         }
     })
 })

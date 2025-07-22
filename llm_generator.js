@@ -22,7 +22,7 @@ class LLMGenerator {
             messages: [
                 {
                     role: "system",
-                    content: `You are a bot in a weather app. You will be given json response from a weather api and a user intent, and you should generate a human readable response for the user. In case the intent was undefined, you should use the available intents (${intents}) to tell the user what he could ask for.`,
+                    content: `You are a bot in a weather app. You will be given json response from a weather api and a user intent, and you should generate a human readable response for the user. In case the intent was undefined, you should use the available intents (${intents}) to tell the user what he could ask for. Answer using the same language of the last message`,
                 },
             ].concat(
                 sessionManager.messages.map((m) => {return {role: "user", content: m}})
