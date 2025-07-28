@@ -17,12 +17,12 @@ const adapter = new botbuilder.BotFrameworkAdapter({
 const port = 8000
 // ************* Config *************
 
-const testMiddleware = function(req, res, next) {
+const testMiddleware = function (req, res, next) {
     console.log('Test Middleware Executed!')
     next()
 }
 
-const loggerMiddleware = function(req, res, next) {
+const loggerMiddleware = function (req, res, next) {
     console.log('Logged!')
     next()
 }
@@ -53,8 +53,53 @@ app.post('/api/messages', async (req, res) => {
 
             if (entity !== 'undefined') {
                 let responseGenerator = new ResponseGenerator()
-                let response = await responseGenerator.generateResponse(intent, entity)
-                await context.sendActivity(response)
+                let rawResponse = await responseGenerator.generateResponse(intent, entity)
+                // await context.sendActivity(response)
+                responseObject = JSON.parse(rawResponse)
+                const adaptiveCard = {
+                    type: "AdaptiveCard",
+                    body: [
+                        {
+                            type: "ColumnSet",
+                            columns: [
+                                {
+                                    type: "Column",
+                                    width: "stretch",
+                                    items: [
+                                        {
+                                            type: "TextBlock",
+                                            text: responseObject.title,
+                                            weight: "Bolder",
+                                            size: "Large"
+                                        }
+                                    ]
+                                },
+                                {
+                                    type: "Column",
+                                    width: "auto",
+                                    items: [
+                                        {
+                                            type: "Image",
+                                            url: responseObject.icon,
+                                            size: "Medium",
+                                            style: "Person"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            type: "TextBlock",
+                            text: responseObject.message,
+                            wrap: true,
+                            spacing: "Medium"
+                        }
+                    ],
+                    $schema: "http://adaptivecards.io/schemas/adaptive-card.json",
+                    version: "1.3"
+                };
+                // const card = botbuilder.CardFactory.heroCard(intent !== 'undefined' ? intent : "Sorry, didn't get you!", `${responseObject.response}`, [responseObject.icon])
+                await context.sendActivity({ attachments: [botbuilder.CardFactory.adaptiveCard(adaptiveCard)] })
             } else {
                 await context.sendActivity("No such city")
             }
